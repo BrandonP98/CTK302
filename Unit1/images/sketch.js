@@ -5,7 +5,7 @@ function setup() {
   TattPen = loadImage("assets/TattPen.jpg");
   Cypr = loadImage("assets/Cypr.jpg");
   Seafood = loadImage("assets/Seafood.png");
-  imageMODE(CENTER) ;
+  imageMode(CENTER) ;
 }
 
 
