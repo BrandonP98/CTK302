@@ -26,10 +26,10 @@ function draw() {
   fill('brown')
   circle(480, 290, 40)
 
-  fill('brown')
+  //fill('brown')
   //circle(510, 220, 40)
 
-  fill('brown')
+  //fill('brown')
   //circle(540, 224, 40)
 
   fill('#FF9C32')
