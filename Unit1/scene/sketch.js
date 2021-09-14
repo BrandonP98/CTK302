@@ -1,24 +1,81 @@
 function setup() {
-  // Sets the screen to be 720 pixels wide and 400 pixels high
-  createCanvas(720, 400);
-  background(0);
-  noStroke();
+  createCanvas(650, 530);
+  rectMode(CENTER);
+  ellipseMode(CENTER);
+  noStroke() ;
+}
 
-  fill(204);
-  triangle(18, 18, 18, 360, 81, 360);
+function draw() {
+  background("#DC22D0");
 
-  fill(102);
-  rect(81, 81, 63, 63);
+  fill('#8222DC')
+  rect(325, 460, 650, 330);
 
-  fill(204);
-  quad(189, 18, 216, 18, 216, 360, 144, 360);
+  fill('#FFB565')
+  rect(325, 460, 650, 170);
 
-  fill(255);
-  ellipse(252, 144, 72, 72);
+  //fill('brown')
+  //rect(530, 360, 30, 300)
 
-  fill(204);
-  triangle(288, 18, 351, 360, 288, 360);
+  fill('#A2861F')
+  rect(465, 385, 30, 250)
 
-  fill(255);
-  arc(479, 300, 280, 280, PI, TWO_PI);
+  fill('brown')
+  circle(440, 295, 40)
+
+  fill('brown')
+  circle(480, 290, 40)
+
+  fill('brown')
+  //circle(510, 220, 40)
+
+  fill('brown')
+  //circle(540, 224, 40)
+
+  fill('#FF9C32')
+  circle(115, 145, 90)
+
+  fill('green');
+  triangle(449, 235, 360, 325, 454, 285);
+
+  fill('green');
+  triangle(449, 235, 540, 315, 454, 285);
+
+  fill('green');
+  triangle(449, 235, 540, 238, 454, 285);
+
+  fill('green');
+  triangle(449, 235, 372, 225, 454, 285);
+
+  fill('green');
+  triangle(439, 235, 493, 166, 484, 243);
+
+  fill('green');
+  triangle(493, 166, 528, 200, 488, 192);
+
+  //fill('green');
+  //triangle(449, 235, 364, 240, 445, 282);
+
+  //fill('green');
+  //triangle(449, 235, 535, 303, 445, 282);
+
+  //fill('green');
+  //triangle(449, 235, 521, 270, 445, 282);
+
+  //fill('green');
+  //triangle(449, 235, 518, 240, 454, 285);
+
+  //fill('green');
+  //triangle(449, 235, 426, 184, 318, 270);
+
+  //fill('green');
+  //triangle(449, 235, 426, 184, 550, 257);
+
+  //fill(0);
+  //text(mouseX + ", " + mouseY, 40, 40);
+}
+
+// record the mouse location in console when clicked
+function mouseReleased() {
+  print(mouseX + ", " + mouseY);
 }
