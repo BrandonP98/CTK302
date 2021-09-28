@@ -1,6 +1,6 @@
 var mic;
 var vol;
-var c = 'green';
+var c = 'purple';
 let x = 0 ;
 
 function setup() {
