@@ -14,38 +14,32 @@ function draw() {
   avatar() ;
   pop() ;
 
-  x = x + 3
-
-
+  x = x + 3 ;
+  if (x>= width) {
+    x = 0 ;
+    }
+  
 }
 
 
 function avatar() {
-  // rain man body head when not pressed
- fill('black')
- ellipse(410, 170, 80, 80);
+  fill('white')
+  circle(90, 95, 70);
+  circle(90, 60, 70);
+  circle(75, 80, 70);
+  circle(60, 60, 70);
+  circle(50, 80, 70);
+circle(122, 77, 70);
 
- fill('white');
- arc(410, 180, 40, 40, 0, PI + QUARTER_PI, CHORD);
+fill('green') ;
+ellipse(325, 200, 300, 300);
 
+fill('green') ;
+ellipse(325, 290, 200, 160);
 
-
- // rain man body
- fill('black');
- rect(390, 200, 40, 140);
- rect(395, 230, 10, 140);
- rect(413, 230, 10, 140);
-
- // rain man arms
- fill('black');
- line(500, 200, 400, 225);
- fill('black');
- line(300, 200, 400, 225);
-
- fill('white')
- ellipse(395, 150, 10, 10);
-
- fill('white')
- ellipse(425, 150, 10, 10);
+fill('black') ;
+ellipse(250, 174, 110, 63);
+ellipse(400, 174, 110, 63);
+ellipse(325, 300, 80, 63);
 
 }
