@@ -11,11 +11,13 @@ function draw() {
       background('white');
       text("case 0", 250, 250);
       break;
+
        case 1:
       background('grey');
       text("case 1", 250, 250);
       break;
-  case 2:
+      case 2:
+      
       background('pink');
       text("case 2", 250, 250);
       break;
