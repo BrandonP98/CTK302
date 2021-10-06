@@ -5,6 +5,7 @@ function setup() {
 
   artdecometro = loadImage("assets/artdecometro.jpg");
   skyplane = loadImage("assets/skyplane.jpg");
+  plane = loadImage("assets/plane.png");
   artdecomiami = loadImage("assets/artdecomiami.jpg");
   imageMode(CENTER) ;
 
@@ -23,6 +24,7 @@ function draw() {
 
       case 1:
       text("So he decides to book a flight somewhere", 5, 22) ;
+      image(skyplane, width/2, height/2, 100, 100)
       image(skyplane, width/2, height/2, 100, 100)
       break ;
 
