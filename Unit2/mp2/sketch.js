@@ -1,4 +1,5 @@
 let numberOfTouches ;
+let plane;
 
 function setup() {
   createCanvas(400, 400);
@@ -19,18 +20,18 @@ function draw() {
   switch(numberOfTouches) {
     case 0:
       text("Larry is a stock broker stressed from living the big city life and desires a getaway aka an escape", 5, 22) ;
-      image(artdecometro, width/2, height/2, 100, 100)
+      image(artdecometro, width/2, height/2, 100, 100) ;
       break ;
 
       case 1:
       text("So he decides to book a flight somewhere", 5, 22) ;
-      image(skyplane, width/2, height/2, 100, 100)
-      image(skyplane, width/2, height/2, 100, 100)
+      image(skyplane, width/2, height/2, 100, 100) ;
+      image(plane, x, 100, 100, 100) ;
       break ;
 
       case 2:
-      text("Which end up flying him out to sunny and coastal Miami where he soaks up South Beach", 5, 22) ;
-      image(artdecomiami, width/2, height/2, 100, 100)
+      text("Which ends up flying him out to sunny and coastal Miami where he soaks up South Beach", 5, 22) ;
+      image(artdecomiami, width/2, height/2, 100, 100) ;
       break ;
 
       case 3:

@@ -11,7 +11,7 @@ background ('grey') ;
 rect(x, 100, 100, 100) ;
 //image(plane, x, 100, 100, 100) ;
 x = x + 3 ;
-if (x>= width) {
+if (x > = width) {
   x = 0 ;
   }
 
