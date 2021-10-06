@@ -27,7 +27,7 @@ function draw() {
       break ;
 
       case 2:
-      text("Which takes him to sunny and coastal Miami where he soaks up South Beach", 5, 22) ;
+      text("Which end up flying him out to sunny and coastal Miami where he soaks up South Beach", 5, 22) ;
       image(artdecomiami, width/2, height/2, 100, 100)
       break ;
 
