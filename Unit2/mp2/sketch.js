@@ -8,7 +8,6 @@ function setup() {
   skyplane = loadImage("assets/skyplane.jpg");
   plane = loadImage("assets/plane.png");
   artdecomiami = loadImage("assets/artdecomiami.jpg");
-  imageMode(CENTER) ;
 
 }
 
@@ -19,7 +18,7 @@ function draw() {
 
   switch(numberOfTouches) {
     case 0:
-      image(artdecometro, 250, 250, 500, 430) ;
+      image(artdecometro, 0, 0, 500, 430) ;
       fill('white') ;
       text("Larry is a stock broker stressed from living the big city life and desires a getaway aka an escape", 5, 22) ;
       break ;
