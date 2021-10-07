@@ -19,12 +19,12 @@ function draw() {
   switch(numberOfTouches) {
     case 0:
       image(artdecometro, 0, 0, 500, 430) ;
-      fill('white') ;
-      text("Larry is a stock broker stressed from living the big city life and desires a getaway aka an escape", 5, 22) ;
+      fill('#b3b3b3') ;
+      text("Larry is a stock broker stressed from living the big city life and desires a getaway aka an escape", 20, 22, 460, 400) ;
       break ;
 
       case 1:
-      image(skyplane,  250, 250, 500, 430) ;
+      image(skyplane,  0, 0, 500, 430) ;
       image(plane, x, 100, 100, 100) ;
       text("So he decides to book a flight somewhere", 5, 22) ;
       //rect(x, 100, 100, 100) ;
@@ -35,7 +35,7 @@ function draw() {
       break ;
 
       case 2:
-      image(artdecomiami, 250, 250, 500, 430) ;
+      image(artdecomiami, 0, 0, 500, 430) ;
       fill('black')
       text("Which ends up flying him out to sunny and coastal Miami where he soaks up South Beach", 5, 22) ;
       break ;
