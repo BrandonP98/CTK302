@@ -1,5 +1,5 @@
 let numberOfTouches ;
-let plane;
+let x = 0;
 
 function setup() {
   createCanvas(400, 400);
@@ -20,24 +20,29 @@ function draw() {
   switch(numberOfTouches) {
     case 0:
       text("Larry is a stock broker stressed from living the big city life and desires a getaway aka an escape", 5, 22) ;
-      image(artdecometro, width/2, height/2, 100, 100) ;
+      image(artdecometro,  250, 250, 500, 430) ;
       break ;
 
       case 1:
       text("So he decides to book a flight somewhere", 5, 22) ;
-      image(skyplane, width/2, height/2, 100, 100) ;
+      image(skyplane,  250, 250, 500, 430) ;
       image(plane, x, 100, 100, 100) ;
+      //rect(x, 100, 100, 100) ;
+      x = x + 3 ;
+      if (x > width) {
+        x = 0 ;
+        }
       break ;
 
       case 2:
       text("Which ends up flying him out to sunny and coastal Miami where he soaks up South Beach", 5, 22) ;
-      image(artdecomiami, width/2, height/2, 100, 100) ;
+      image(artdecomiami, 250, 250, 500, 430) ;
       break ;
 
-      case 3:
-     text("three are touching the screen", 5, 22) ;
+      //case 3:
+     //text("three are touching the screen", 5, 22) ;
             // put a picture here
-      break ;
+      //break ;
 
 
   }
