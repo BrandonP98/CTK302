@@ -12,7 +12,7 @@ function draw() {
 
     case 0:
       background('#abebe6');
-      text("What did the phone buy his longtime girlfriend?", 100, 100);
+      text("What did the phone buy his longtime girlfriend?", 200, 100);
       break;
 
     case 1:
