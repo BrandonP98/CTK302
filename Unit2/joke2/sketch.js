@@ -11,13 +11,13 @@ function draw() {
   switch (state) {
 
     case 0:
-      background('grey');
-      text('what did the criminal say to the vibrating chair?', width/2, height/2);
+      background('#abebe6');
+      text("What did the phone buy his longtime girlfriend?", 100, 100);
       break;
 
     case 1:
-      background('yellow');
-      text("what are you shaking for, I'm the one going to jail", width/2, height/2);
+      background('#faeeb6');
+      text("A ring", 100, 100);
 
       break;
   }
