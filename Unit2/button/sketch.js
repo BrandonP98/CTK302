@@ -32,8 +32,8 @@ function draw() {
       //break;
 
   }
-  fill('black')
-  text(mouseX + ", " + mouseY, 15, 15)
+  //fill('black')
+  //text(mouseX + ", " + mouseY, 15, 15)
 }
 
 
