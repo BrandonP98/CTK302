@@ -9,16 +9,15 @@ function draw() {
   switch (state) {
 
     case 0:
-      background('grey');
-      // text('what did the criminal say to the vibrating chair?', width/2 height/2);
-      //text("what are you shaking for, I'm the one going to jail", width/2 height/2);
-      text("what did the criminal say to the vibrating chair?", 100, 100) ;
+      background('#42f5c5');
+      text("What did the criminal say to the vibrating chair?", 100, 100) ;
+
       break;
 
     case 1:
-      background('yellow');
-      //text("what are you shaking for, I'm the one going to jail", width/2 height/2);
-      text("hello world", 100, 100) ;
+      background('#9ef542');
+      text("What are you shaking for? I'm the one going to jail!", 100, 100) ;
+
       break;
   }
 
