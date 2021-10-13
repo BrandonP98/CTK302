@@ -32,8 +32,13 @@ function draw() {
       //break;
 
   }
+<<<<<<< HEAD
   //fill('black')
   //text(mouseX + ", " + mouseY, 15, 15)
+=======
+  fill('black')
+  text(mouseX + ", " + mouseY, 15, 15)
+>>>>>>> 801ec18525cd706a9088b548298c23c07276c3c4
 }
 
 
