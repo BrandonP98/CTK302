@@ -19,17 +19,31 @@ function draw() {
   vol = (mic.getLevel().toFixed(2)); // returned level is between 0 and 1
 
   // check how loud the input is
-  if (vol > .20) { // if the volume is LOUD?
+  if (vol > 0.20) { // if the volume is LOUD?
     // do something
 
     c = color(random(255), random(255), random(255)); // here I'm setting the background to a random color
   }
 
+  else
+
+  if (vol > 0.15) { // if the volume is LOUD?
+    // do something
+
+  textSize(18);
+  fill('black')
+  text("You're gonna crash my system!", 90, 190);
+
+
+  }
+
+
   // extra stuff for debugging
   textSize(18);
-  text("Click the screen first to give\npermission for mic input.\nMy volume is " + vol, 10, 60);
+  text("Click and talk\nNot too loud tho!\n\nMy volume is " + vol, 20, 40);
 
-  rect(vol * 100, 100, 50, 50);
+  stroke('white')
+  rect(vol * 100, 120, 50, 50);
 
 //   rect(vol * 300, 150, 50, 50);
 
