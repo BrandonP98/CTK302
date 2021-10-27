@@ -8,6 +8,10 @@ let frogPos;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
+  evilp = loadImage("assets/evilp.png");
+  //skyplane = loadImage("assets/skyplane.jpg");
+  //plane = loadImage("assets/plane.png");
+  //artdecomiami = loadImage("assets/artdecomiami.jpg");
 
   // Spawn many objects
   for (let i = 0; i < 12; i++) {
@@ -22,11 +26,11 @@ function draw() {
   case 0: // welcome
     background('red');
     fill('white');
-    text("Hurry up and click!", 175, 400) ;
+    text("Hurry up and click!", 500, 400) ;
     fill('white');
     textSize(40)
-    text("Smashin' Pumpkins", 150, 100) ;
-    rect(260, 240, 100, 100)
+    text("Smashin' Pumpkins", 550, 100) ;
+    rect(400, 240, 100, 100)
     // image(splashscreen, ....)
     break ;
 
@@ -127,8 +131,8 @@ class Car {
   display() {
     fill(this.cor);
     // rect(this.pos.x, this.pos.y, 75, 25);
-    textSize(this.size);
-    text("RAIN", this.pos.x, this.pos.y);
+    imgSize(40, 40);
+    image(evilp, this.pos.x, this.pos.y);
   }
 
   move() {
