@@ -8,9 +8,9 @@ let frogPos;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  //evilp = loadImage("assets/evilp.png");
-  //skyplane = loadImage("assets/skyplane.jpg");
-  //plane = loadImage("assets/plane.png");
+  evilp = loadImage("assets/evilp.png");
+  halloweenmoon = loadImage("assets/halloweenmoon.jpg");
+  toolhammerc = loadImage("assets/toolhammerc.png");
   //artdecomiami = loadImage("assets/artdecomiami.jpg");
 
   // Spawn many objects
@@ -26,11 +26,12 @@ function draw() {
   case 0: // welcome
     background('red');
     fill('white');
-    text("Hurry up and click!", 500, 400) ;
+    text("Hurry Up & Click!", 425, 450) ;
     fill('white');
-    textSize(40)
-    text("Smashin' Pumpkins", 550, 100) ;
-    rect(400, 240, 100, 100)
+    textSize(60);
+    text("SMASHIN' PUMPKINS", 360, 150) ;
+    //rect(400, 240, 100, 100)
+    image(evilp, 600, 240, 100, 100);
     // image(splashscreen, ....)
     break ;
 
@@ -46,18 +47,25 @@ function draw() {
     case 2: // winning state
     background('red');
     fill('white');
-    text("SO YOU CAN SUCCEED?", 100, 100) ;
+    textSize(40);
+    text("SO YOU CAN SUCCEED?", 450, 100) ;
     break ;
 
     case 3:
-    background('red');
+    background('black');
     fill('white');
-    text("YOU SUCK!", 100, 100) ;
+    textSize(70);
+    fill('orange')
+    text("YOU SUCK!!", 460, 300) ;
     break ; // losing state
   }
 }
 
+
  function mouseReleased(){
+   if ((state == 0) && (mouseX > 135) && (mouseX < 235) && (mouseY > 110) && (mouseY < 210)) {
+    state = 1;
+  }
    switch(state){
      case 0:
        state = 1 ;
@@ -79,7 +87,8 @@ function draw() {
 
 
 function game() {
-  background("white");
+  background('black');
+  image(halloweenmoon, 5, 5, 1300, 655 );
   for (let i = 0; i < cars.length; i++) {
     cars[i].display();
     cars[i].move();
@@ -97,10 +106,10 @@ function game() {
   // print out how many cars are left
   fill('black');
   textSize(16) ;
-  text("cars left: "+ cars.length + " cars we collected = "+ carsEaten, 20, 30) ;
+  text("Pumpkins Left: "+ cars.length + " Pumkins Smashed = "+ carsEaten, 20, 30) ;
 
-  fill("green");
-  ellipse(frogPos.x, frogPos.y, 50, 50);
+  //fill("green");
+  image(toolhammerc, frogPos.x, frogPos.y, 50, 50);
   checkForKeys() ;
 }
 
@@ -131,8 +140,8 @@ class Car {
   display() {
     fill(this.cor);
     // rect(this.pos.x, this.pos.y, 75, 25);
-    textSize(this.size);
-    image("RAIN", this.pos.x, this.pos.y);
+    //textSize(this.size);
+    image(evilp, this.pos.x, this.pos.y, 40, 40);
   }
 
   move() {
