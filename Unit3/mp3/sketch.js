@@ -8,7 +8,7 @@ let frogPos;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  evilp = loadImage("assets/evilp.png");
+  //evilp = loadImage("assets/evilp.png");
   //skyplane = loadImage("assets/skyplane.jpg");
   //plane = loadImage("assets/plane.png");
   //artdecomiami = loadImage("assets/artdecomiami.jpg");
@@ -131,8 +131,8 @@ class Car {
   display() {
     fill(this.cor);
     // rect(this.pos.x, this.pos.y, 75, 25);
-    imgSize(40, 40);
-    image(evilp, this.pos.x, this.pos.y);
+    textSize(this.size);
+    image("RAIN", this.pos.x, this.pos.y);
   }
 
   move() {
