@@ -38,7 +38,7 @@ function draw() {
     case 1: // game state
     game();
     timer++ ;
-      if (timer > 10*60) {
+      if (timer > 10*80) {
         state = 3 ; //we lost
         timer = 0 ;
       }
@@ -48,7 +48,7 @@ function draw() {
     background('red');
     fill('white');
     textSize(70);
-    text("SO YOU CAN SUCCEED?", 370, 300) ;
+    text("SO YOU CAN SUCCEED?", 270, 300) ;
     break ;
 
     case 3:
