@@ -109,7 +109,7 @@ function game() {
   text("Pumpkins Left: "+ cars.length + " Pumkins Smashed = "+ carsEaten, 20, 30) ;
 
   //fill("green");
-  image(toolhammerc, frogPos.x, frogPos.y, 50, 50);
+  image(toolhammerc, frogPos.x, frogPos.y, 100, 100);
   checkForKeys() ;
 }
 
@@ -141,7 +141,7 @@ class Car {
     fill(this.cor);
     // rect(this.pos.x, this.pos.y, 75, 25);
     //textSize(this.size);
-    image(evilp, this.pos.x, this.pos.y, 40, 40);
+    image(evilp, this.pos.x, this.pos.y, 60, 60);
   }
 
   move() {
