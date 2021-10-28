@@ -106,7 +106,7 @@ function game() {
   // print out how many cars are left
   fill('black');
   textSize(16) ;
-  text("Pumpkins Left: "+ cars.length + " Pumkins Smashed = "+ carsEaten, 20, 30) ;
+  text("Pumpkins Left: "+ cars.length + " Pumpkins Smashed = "+ carsEaten, 20, 30) ;
 
   //fill("green");
   image(toolhammerc, frogPos.x, frogPos.y, 100, 100);
