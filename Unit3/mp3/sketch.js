@@ -48,7 +48,7 @@ function draw() {
     background('red');
     fill('white');
     textSize(70);
-    text("SO YOU CAN SUCCEED?", 400, 300) ;
+    text("SO YOU CAN SUCCEED?", 370, 300) ;
     break ;
 
     case 3:
