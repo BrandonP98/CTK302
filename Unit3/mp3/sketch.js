@@ -47,8 +47,8 @@ function draw() {
     case 2: // winning state
     background('red');
     fill('white');
-    textSize(40);
-    text("SO YOU CAN SUCCEED?", 450, 100) ;
+    textSize(70);
+    text("SO YOU CAN SUCCEED?", 450, 300) ;
     break ;
 
     case 3:
