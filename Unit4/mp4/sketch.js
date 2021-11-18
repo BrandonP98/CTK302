@@ -8,7 +8,10 @@ var yPosition = 0;
 var plane;
 // var bunnyImage;
 var frogPos;
-
+var city = 0;
+ //1 = Tampa
+ //2 = Albuquerque
+ //3 = Seattle
 
 function setup() {
 
@@ -37,9 +40,10 @@ function draw() {
   // the map command !!!!
   // takes your variable and maps it from range 1 to range 2
   // map(yourVar, range1_x, range1_y, range2_x, range2_y) ;
-  xPosition = map(gamma, -18, 18, 0, width);
-  yPosition = map(beta, 25, 45, 0, height);
-
+  //xPosition = map(gamma, -18, 18, 0, width);
+  //yPosition = map(beta, 25, 45, 0, height);
+    xPosition = mouseX;
+    yPosition = mouseY;
 
   // move the frog around the screen
   push(); // before you use translate, rotate, or scale commands, push and then pop after
@@ -49,6 +53,7 @@ function draw() {
   // draw the FROG
   image(plane, 0, 0, 100, 100);
   pop();
+  //if(xPosition >)
 
 
   // update the frog's position using the accelerometer data
@@ -61,7 +66,7 @@ function draw() {
   fill('white');
   textSize(40);
   textAlign(CENTER);
-  text("your words or image here!", width / 2, 600, windowWidth - 200, windowHeight - 200);
+  text("", width / 2, 600, windowWidth - 200, windowHeight - 200);
 
 
   // Debugging information -- take this out when you're ready for production!
@@ -80,7 +85,7 @@ function draw() {
   text("x = " + x, 25, 150); // .toFixed means just show (x) decimal places
   text("y = " + y, 25, 170);
   text("z = " + z, 25, 190);
-
+  text(xPosition + ", " + yPosition, 25, 210);
 
 }
 
