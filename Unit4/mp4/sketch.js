@@ -107,7 +107,7 @@ prevcity = city;
             }
       break;
 
-      case 3:
+      case 3: //Seattle
           background('yellow');
         fill('black')
         text("What is the weather in " + weather.name + "?", 20, 20);
