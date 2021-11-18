@@ -49,10 +49,10 @@ function draw() {
   // the map command !!!!
   // takes your variable and maps it from range 1 to range 2
   // map(yourVar, range1_x, range1_y, range2_x, range2_y) ;
-  //xPosition = map(gamma, -18, 18, 0, width);
-  //yPosition = map(beta, 25, 45, 0, height);
-  xPosition = mouseX;
-  yPosition = mouseY;
+  xPosition = map(gamma, -18, 18, 0, width);
+  yPosition = map(beta, 25, 45, 0, height);
+  //xPosition = mouseX;
+  //yPosition = mouseY;
 
   // move the frog around the screen
   push(); // before you use translate, rotate, or scale commands, push and then pop after
