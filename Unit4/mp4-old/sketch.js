@@ -5,8 +5,11 @@ var y = 0;
 var z = 0;
 var xPosition = 0;
 var yPosition = 0;
-var plane;
+var cat;
+var mouse;
+
 // var bunnyImage;
+var cars = [];
 var frogPos;
 
 
@@ -20,11 +23,16 @@ function setup() {
   gamma = 0;
 
 
+  // spawn a bunch of cars
+  for (var i = 0; i < 40; i++) {
+    cars.push(new Car());
+  }
 
-
+  // initialize the frog's position
+  frogPos = createVector(width / 2, height - 80);
 
   // load any images you need
-  plane = loadImage("assets/plane.png");
+  bunnyImage = loadImage("assets/mouse.jpg");
   imageMode(CENTER);
   rectMode(CENTER);
   noStroke();
@@ -47,15 +55,24 @@ function draw() {
   //  rotate(radians(alpha)); // using alpha in here so it doesn't feel bad
 
   // draw the FROG
-  image(plane, 0, 0, 100, 100);
+  image(cat, 0, 0, 100, 100);
+  fill('green');
+  ellipse(0, 0, 80, 80);
   pop();
 
 
   // update the frog's position using the accelerometer data
-  //frogPos.x = xPosition;
-  //frogPos.y = yPosition;
+  frogPos.x = xPosition;
+  frogPos.y = yPosition;
 
-
+  // iterate through the car loop to move them and see if we need to delete cars
+  for (var i = 0; i < cars.length; i++) {
+    cars[i].display();
+    cars[i].drive();
+    if (cars[i].pos.dist(frogPos) < 50) {
+      cars.splice(i, 1);
+    }
+  }
 
   // MORE DECORATIONS - write that pretty ATK type on top.
   fill('white');
@@ -85,7 +102,11 @@ function draw() {
 }
 
 function deviceShaken() {
-
+  // re-spawn cars
+  cars = []; // clear the array first
+  for (var i = 0; i < 40; i++) {
+    cars.push(new Car());
+  }
 }
 
 
@@ -106,3 +127,42 @@ window.addEventListener('devicemotion', function(e) {
   y = e.acceleration.y;
   z = e.acceleration.z;
 });
+
+
+
+
+
+// car class!!
+function Car() {
+  // attributes
+  this.pos = createVector(100, 100);
+  this.vel = createVector(random(-5, 5), random(-5, 5));
+  this.r = random(255);
+  this.g = random(255);
+  this.b = random(255);
+  this.a = random(255);  // alpha opacity value for fill!
+
+
+  // methods
+  this.display = function() {
+
+    // maybe use an image here instead!
+    image(mouse, this.pos.x, this.pos.y, 100, 100)
+  //  fill(this.r, this.g, this.b, this.a);
+  //  ellipse(this.pos.x - 50, this.pos.y, 50, 50);
+  //  ellipse(this.pos.x + 50, this.pos.y, 50, 50);
+  //  rect(this.pos.x + 17, this.pos.y - 30, 80, 60) ;
+
+  }
+
+  this.drive = function() {
+    this.pos.add(this.vel);
+
+    if (this.pos.x > width) this.pos.x = 0;
+    if (this.pos.x < 0) this.pos.x = width;
+    if (this.pos.y > height) this.pos.y = 0;
+    if (this.pos.y < 0) this.pos.y = height;
+
+  }
+
+}
