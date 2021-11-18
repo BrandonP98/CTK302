@@ -32,7 +32,7 @@ function setup() {
   frogPos = createVector(width / 2, height - 80);
 
   // load any images you need
-  bunnyImage = loadImage("assets/mouse.jpg");
+  loadplane = loadImage("assets/plane.png");
   imageMode(CENTER);
   rectMode(CENTER);
   noStroke();
