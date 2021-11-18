@@ -73,7 +73,7 @@ function draw() {
 
        case 2: // the win state
        resetTheGame() ;
-       state = 2 ;
+       state = 0 ;
        break ;
 
        case 3: // losing state
