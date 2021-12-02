@@ -37,6 +37,8 @@ function setup() {
   // load any images you need
   plane = loadImage("assets/plane.png");
   albuquerque = loadImage("assets/NewMexico.png");
+  grunge = loadImage("assets/Seattle4.png");
+  tampa = loadImage("assets/Tampa.png");
   imageMode(CENTER);
   rectMode(CENTER);
   noStroke();
@@ -70,6 +72,16 @@ function draw() {
     myCityString = 'https://api.openweathermap.org/data/2.5/weather?q=Albuquerque,NM,US&units=imperial&appid=2ab3fd961cc8c4aacb1786ddb79e8da5';
   }
 
+  if ((xPosition > 170) && (yPosition < 250) && (yPosition > 350)) {
+    city = 1;
+    myCityString = 'https://api.openweathermap.org/data/2.5/weather?q=Tampa,FL,US&units=imperial&appid=2ab3fd961cc8c4aacb1786ddb79e8da5';
+  }
+
+  if ((xPosition < 170) && (yPosition > 250) && (yPosition < 350)) {
+    city = 3;
+    myCityString = 'https://api.openweathermap.org/data/2.5/weather?q=Seattle,WA,US&units=imperial&appid=2ab3fd961cc8c4aacb1786ddb79e8da5';
+  }
+
 if (prevcity != city){
   loadJSON(myCityString, gotData);
 }
@@ -83,8 +95,8 @@ prevcity = city;
       break;
 
     case 1:
-    background('green');
-      text("Tampa", 20, 22, 460, 400);
+    image(tampa, 0, 0, 800, 450);
+    if (weather) {
       //rect(x, 100, 100, 100) ;
       text("What is the weather in " + weather.name + "?", 20, 20);
      text("Windspeed Is " + windspeed, 20, 40);
@@ -108,7 +120,9 @@ prevcity = city;
       break;
 
       case 3: //Seattle
-          background('yellow');
+      image(grunge, 0, 0, 500, 130);
+      if (weather) {
+
         fill('black')
         text("What is the weather in " + weather.name + "?", 20, 20);
        text("Windspeed Is " + windspeed, 20, 40);
