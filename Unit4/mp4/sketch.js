@@ -109,14 +109,12 @@ prevcity = city;
       image(albuquerque, 0, 0, 500, 430);
       if (weather) {
 
-
       fill('black')
       text("What is the weather in " + weather.name + "?", 20, 20);
      text("Windspeed Is " + windspeed, 20, 40);
      text("Temperature is " + temp, 20, 60);
      text("Humidty is " + humidity, 20, 80);
      text("Feels like " + feels_like, 20, 100);
-            }
       break;
 
       case 3: //Seattle
