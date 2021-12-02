@@ -23,7 +23,7 @@ var feels_like = 0;
 
 function setup() {
 
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(displayWidth, displayHeight);
 
   // initialize accelerometer variables
   alpha = 0;
