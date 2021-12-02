@@ -16,7 +16,7 @@ var myCityString;
 //3 = Seattle
 var weather;
 var weatherID = 0; // returned in the JSON weather element
-var windspeed = 0 ;
+var windspeed = 0;
 var temp = 0;
 var humidity = 0;
 var feels_like = 0;
@@ -53,40 +53,33 @@ function draw() {
   // map(yourVar, range1_x, range1_y, range2_x, range2_y) ;
   xPosition = map(gamma, -18, 18, 0, width);
   yPosition = map(beta, 25, 45, 0, height);
-  //xPosition = mouseX;
-  //yPosition = mouseY;
+  xPosition = mouseX;
+  yPosition = mouseY;
 
-  // move the frog around the screen
-  push(); // before you use translate, rotate, or scale commands, push and then pop after
-  translate(xPosition, yPosition); // move everything over by x, y
-  //  rotate(radians(alpha)); // using alpha in here so it doesn't feel bad
 
-  // draw the FROG
-  image(plane, 0, 0, 100, 100);
-  pop();
 
- prevcity = city;
+  prevcity = city;
   //determine what city we're in
-  if ((xPosition < 170) && (yPosition > 250) && (yPosition < 350)) {
+  if ((xPosition < 120) && (yPosition > 350) && (yPosition < 600)) {
     city = 2;
     myCityString = 'https://api.openweathermap.org/data/2.5/weather?q=Albuquerque,NM,US&units=imperial&appid=2ab3fd961cc8c4aacb1786ddb79e8da5';
   }
 
-  if ((xPosition > 170) && (yPosition < 350) && (yPosition > 350)) {
+  if ((xPosition > 400) && (yPosition > 370) && (yPosition < 600)) {
     city = 1;
     myCityString = 'https://api.openweathermap.org/data/2.5/weather?q=Tampa,FL,US&units=imperial&appid=2ab3fd961cc8c4aacb1786ddb79e8da5';
   }
 
-  if ((xPosition < 170) && (yPosition > 150) && (yPosition < 350)) {
+  if ((xPosition < 230) && (yPosition < 180) && (yPosition > 0)) {
     city = 3;
     myCityString = 'https://api.openweathermap.org/data/2.5/weather?q=Seattle,WA,US&units=imperial&appid=2ab3fd961cc8c4aacb1786ddb79e8da5';
   }
 
-if (prevcity != city){
-  loadJSON(myCityString, gotData);
-}
+  if (prevcity != city) {
+    loadJSON(myCityString, gotData);
+  }
 
-prevcity = city;
+  prevcity = city;
   switch (city) {
     case 0:
       //image(artdecometro, 0, 0, 500, 430) ;
@@ -95,91 +88,102 @@ prevcity = city;
       break;
 
     case 1:
-    image(tampa, 0, 0, 800, 450);
-    if (weather) {
-      //rect(x, 100, 100, 100) ;
-      fill('black');
-      text("What is the weather in " + weather.name + "?", 20, 20);
-     text("Windspeed Is " + windspeed, 20, 40);
-     text("Temperature is " + temp, 20, 60);
-     text("Humidty is " + humidity, 20, 80);
-     text("Feels like " + feels_like, 20, 100);
+      image(tampa, width /2, height /2, width, height);
+      if (weather) {
+        //rect(x, 100, 100, 100) ;
+        fill('black');
+        text("What is the weather in " + weather.name + "?", 20, 20);
+        text("Windspeed Is " + windspeed, 20, 40);
+        text("Temperature is " + temp, 20, 60);
+        text("Humidty is " + humidity, 20, 80);
+        text("Feels like " + feels_like, 20, 100);
+      }
       break;
 
     case 2:
-      image(albuquerque, 0, 0, 500, 430);
-      if (weather) {
-
-      fill('black');
-      text("What is the weather in " + weather.name + "?", 20, 20);
-     text("Windspeed Is " + windspeed, 20, 40);
-     text("Temperature is " + temp, 20, 60);
-     text("Humidty is " + humidity, 20, 80);
-     text("Feels like " + feels_like, 20, 100);
-      break;
-
-      case 3: //Seattle
-      image(grunge, 0, 0, 500, 130);
+      image(albuquerque, width /2, height /2, width, height);
       if (weather) {
 
         fill('black');
         text("What is the weather in " + weather.name + "?", 20, 20);
-       text("Windspeed Is " + windspeed, 20, 40);
-       text("Temperature is " + temp, 20, 60);
-       text("Humidty is " + humidity, 20, 80);
-       text("Feels like " + feels_like, 20, 100);
-        break;
+        text("Windspeed Is " + windspeed, 20, 40);
+        text("Temperature is " + temp, 20, 60);
+        text("Humidty is " + humidity, 20, 80);
+        text("Feels like " + feels_like, 20, 100);
+      }
+      break;
+
+    case 3: //Seattle
+      image(grunge, width /2, height /2, width, height);
+      if (weather) {
+
+        fill('black');
+        text("What is the weather in " + weather.name + "?", 20, 20);
+        text("Windspeed Is " + windspeed, 20, 40);
+        text("Temperature is " + temp, 20, 60);
+        text("Humidty is " + humidity, 20, 80);
+        text("Feels like " + feels_like, 20, 100);
+      }
+      break;
+  }
+
+  // Debugging information -- take this out when you're ready for production!
+  // Just a bunch of text commands to display data coming in from addEventListeners
+  //textAlign(LEFT);
+  //textSize(20);
+  //fill('black');
+  //text("orientation data:", 25, 25);
+  //textSize(15);
+  //text("alpha: " + alpha, 25, 50);
+  //text("beta: " + beta, 25, 70);
+  //text("gamma: " + gamma, 25, 90);
+  //textSize(20);
+  //text("acceleration data:", 25, 125);
+  //textSize(15);
+  //text("x = " + x, 25, 150); // .toFixed means just show (x) decimal places
+  //text("y = " + y, 25, 170);
+  //stext("z = " + z, 25, 190);
+  // move the frog around the screen
+  push(); // before you use translate, rotate, or scale commands, push and then pop after
+  translate(xPosition, yPosition); // move everything over by x, y
+  //  rotate(radians(alpha)); // using alpha in here so it doesn't feel bad
+
+  // draw the FROG
+  image(plane, 0, 0, 100, 100);
+  pop();
+  text(xPosition + ", " + yPosition, 25, 210);
+
 }
 
-      // Debugging information -- take this out when you're ready for production!
-      // Just a bunch of text commands to display data coming in from addEventListeners
-      //textAlign(LEFT);
-      //textSize(20);
-      //fill('black');
-      //text("orientation data:", 25, 25);
-      //textSize(15);
-      //text("alpha: " + alpha, 25, 50);
-      //text("beta: " + beta, 25, 70);
-      //text("gamma: " + gamma, 25, 90);
-      //textSize(20);
-      //text("acceleration data:", 25, 125);
-      //textSize(15);
-      //text("x = " + x, 25, 150); // .toFixed means just show (x) decimal places
-      //text("y = " + y, 25, 170);
-      //stext("z = " + z, 25, 190);
-      text(xPosition + ", " + yPosition, 25, 210);
+function deviceShaken() {
 
-  }
-
-  function deviceShaken() {
-
-  }
+}
 
 
-  // HERE'S THE STUFF YOU NEED FOR READING IN DATA!!!
+// HERE'S THE STUFF YOU NEED FOR READING IN DATA!!!
 
-  // Read in accelerometer data
-  window.addEventListener('deviceorientation', function(e) {
-    alpha = e.alpha;
-    beta = e.beta;
-    gamma = e.gamma;
-  });
+// Read in accelerometer data
+window.addEventListener('deviceorientation', function(e) {
+  alpha = e.alpha;
+  beta = e.beta;
+  gamma = e.gamma;
+});
 
 
-  // accelerometer Data
-  window.addEventListener('devicemotion', function(e) {
-    // get accelerometer values
-    x = e.acceleration.x;
-    y = e.acceleration.y;
-    z = e.acceleration.z;
-  });
+// accelerometer Data
+window.addEventListener('devicemotion', function(e) {
+  // get accelerometer values
+  x = e.acceleration.x;
+  y = e.acceleration.y;
+  z = e.acceleration.z;
+});
 
-  function gotData(data) {
+function gotData(data) {
 
   weather = data;
   console.log(weather); // for debugging purposes, print out the JSON data when we get it.
   windspeed = weather.wind.speed;
-temp = weather.main.temp ;
-humidity = weather.main.humidity;
-feels_like = weather.main.feels_like;
+  temp = weather.main.temp;
+  humidity = weather.main.humidity;
+  feels_like = weather.main.feels_like;
 }
