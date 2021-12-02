@@ -53,8 +53,8 @@ function draw() {
   // map(yourVar, range1_x, range1_y, range2_x, range2_y) ;
   xPosition = map(gamma, -18, 18, 0, width);
   yPosition = map(beta, 25, 45, 0, height);
-  xPosition = mouseX;
-  yPosition = mouseY;
+  //xPosition = mouseX;
+  //yPosition = mouseY;
 
 
 
@@ -152,10 +152,6 @@ function draw() {
   image(plane, 0, 0, 100, 100);
   pop();
   text(xPosition + ", " + yPosition, 25, 210);
-
-}
-
-function deviceShaken() {
 
 }
 
