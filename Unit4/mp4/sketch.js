@@ -72,12 +72,12 @@ function draw() {
     myCityString = 'https://api.openweathermap.org/data/2.5/weather?q=Albuquerque,NM,US&units=imperial&appid=2ab3fd961cc8c4aacb1786ddb79e8da5';
   }
 
-  if ((xPosition > 170) && (yPosition < 250) && (yPosition > 350)) {
+  if ((xPosition > 170) && (yPosition < 350) && (yPosition > 350)) {
     city = 1;
     myCityString = 'https://api.openweathermap.org/data/2.5/weather?q=Tampa,FL,US&units=imperial&appid=2ab3fd961cc8c4aacb1786ddb79e8da5';
   }
 
-  if ((xPosition < 170) && (yPosition > 250) && (yPosition < 350)) {
+  if ((xPosition < 170) && (yPosition > 150) && (yPosition < 350)) {
     city = 3;
     myCityString = 'https://api.openweathermap.org/data/2.5/weather?q=Seattle,WA,US&units=imperial&appid=2ab3fd961cc8c4aacb1786ddb79e8da5';
   }
