@@ -98,6 +98,7 @@ prevcity = city;
     image(tampa, 0, 0, 800, 450);
     if (weather) {
       //rect(x, 100, 100, 100) ;
+      fill('black');
       text("What is the weather in " + weather.name + "?", 20, 20);
      text("Windspeed Is " + windspeed, 20, 40);
      text("Temperature is " + temp, 20, 60);
@@ -109,7 +110,7 @@ prevcity = city;
       image(albuquerque, 0, 0, 500, 430);
       if (weather) {
 
-      fill('black')
+      fill('black');
       text("What is the weather in " + weather.name + "?", 20, 20);
      text("Windspeed Is " + windspeed, 20, 40);
      text("Temperature is " + temp, 20, 60);
@@ -121,7 +122,7 @@ prevcity = city;
       image(grunge, 0, 0, 500, 130);
       if (weather) {
 
-        fill('black')
+        fill('black');
         text("What is the weather in " + weather.name + "?", 20, 20);
        text("Windspeed Is " + windspeed, 20, 40);
        text("Temperature is " + temp, 20, 60);
