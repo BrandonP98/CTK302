@@ -91,7 +91,7 @@ prevcity = city;
     case 0:
       //image(artdecometro, 0, 0, 500, 430) ;
       fill('#b3b3b3');
-      text("Plane in Center", width / 2, height / 2);
+      text("Fly to a city to experience regional weather ", width / 2, height / 2);
       break;
 
     case 1:
