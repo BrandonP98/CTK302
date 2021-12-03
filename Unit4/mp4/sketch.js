@@ -151,7 +151,7 @@ function draw() {
   // draw the FROG
   image(plane, 0, 0, 100, 100);
   pop();
-  text(xPosition + ", " + yPosition, 25, 210);
+  //text(xPosition + ", " + yPosition, 25, 210);
 
 }
 
