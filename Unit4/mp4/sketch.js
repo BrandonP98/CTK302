@@ -114,7 +114,7 @@ function draw() {
       break;
 
     case 3: //Seattle
-      image(grunge, width /2, height /2, 550, 900);
+      image(grunge, width /2, height /2, 350, 900);
       if (weather) {
 
         fill('black');
