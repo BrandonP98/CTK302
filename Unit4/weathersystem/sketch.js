@@ -13,6 +13,7 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
 
     santacruz = loadImage("assets/santacruz.jpeg");
+    skatecruz = loadImage("assets/skatecruz.png");
 
   // HERE is the call to get the weather.
 
@@ -49,10 +50,11 @@ function draw() {
       break;
 
     case 1:
-      fill('#ddff87')
+      //fill('#ddff87')
       background('#ddff87');
       image(santacruz, 35, 30, 1200, 665);
-      fill('black');
+      image(skatecruz, x, 300, 100, 100);
+      //fill('black');
       textSize(24)
       text("What is the weather in " + weather.name + "?", 20, 20);
       text("Windspeed Is " + windspeed, 20, 50);
@@ -63,9 +65,9 @@ function draw() {
 
 
       // cloud
-      fill('white');
-      noStroke();
-      ellipse(x, 300, 200, 100);
+      //fill('white');
+      //noStroke();
+      //ellipse(x, 300, 200, 100);
 
       // move the cloud's x position
       x = x + windspeed;
