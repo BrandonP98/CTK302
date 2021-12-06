@@ -49,14 +49,16 @@ function draw() {
       break;
 
     case 1:
-      background(200);
-      image(santacruz,  width /2, height /2, width, height);
+      fill('#ddff87')
+      background('#ddff87');
+      image(santacruz, 35, 30, 1200, 665);
       fill('black');
+      textSize(24)
       text("What is the weather in " + weather.name + "?", 20, 20);
-      text("Windspeed Is " + windspeed, 20, 40);
-      text("Temperature is " + temp, 20, 60);
-      text("Humidty is " + humidity, 20, 80);
-      text("Feels like " + feels_like, 20, 100);
+      text("Windspeed Is " + windspeed, 20, 50);
+      text("Temperature is " + temp, 20, 80);
+      text("Humidty is " + humidity, 20, 110);
+      text("Feels like " + feels_like, 20, 140);
 
 
 
