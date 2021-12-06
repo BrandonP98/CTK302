@@ -50,7 +50,7 @@ function draw() {
 
     case 1:
       background(200);
-      image(santacruz, width /2, height /2, 100, 100);
+      image(santacruz,  width /2, height /2, width, height);
       fill('black');
       text("What is the weather in " + weather.name + "?", 20, 20);
       text("Windspeed Is " + windspeed, 20, 40);
