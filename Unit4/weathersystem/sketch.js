@@ -10,7 +10,7 @@ var humidity = 0;
 var feels_like = 0;
 
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(windowWidth, windowHeight);
 
     santacruz = loadImage("assets/santacruz.jpeg");
 
