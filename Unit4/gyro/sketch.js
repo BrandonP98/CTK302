@@ -1,6 +1,7 @@
 // variables needed for gyroscope
 let alpha = 0, beta = 0, gamma = 0; // orientation data
 let plane;
+let planet;
 //var x = 0; // acceleration data
 //var y = 0;
 //var z = 0;
@@ -26,6 +27,7 @@ function setup() {
 
 
   // load any images you need
+  planet = loadImage("assets/planet.png");
   plane = loadImage("assets/plane.png");
   imageMode(CENTER);
   rectMode(CENTER);
@@ -34,7 +36,7 @@ function setup() {
 
 function draw() {
 
-  background('#c6f5ff'); // light blue
+  background('#f0c456'); // light blue
 
   // the map command !!!!
   // takes your variable and maps it from range 1 to range 2
@@ -81,7 +83,7 @@ function draw() {
   fill('white');
   textSize(40);
   textAlign(CENTER);
-  text("your words or image here!", width / 2, 600, windowWidth - 200, windowHeight - 200);
+  text("What's within your orbit?", width / 2, 600, windowWidth - 200, windowHeight - 200);
 
 }
 
