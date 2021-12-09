@@ -8,8 +8,8 @@ let frogPos;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  evilp = loadImage("assets/evilp.png");
-  halloweenmoon = loadImage("assets/halloweenmoon.jpg");
+  newmex = loadImage("assets/evilp.png");
+   = loadImage("assets/halloweenmoon.jpg");
   toolhammerc = loadImage("assets/toolhammerc.png");
   //artdecomiami = loadImage("assets/artdecomiami.jpg");
 
