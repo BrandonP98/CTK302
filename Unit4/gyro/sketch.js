@@ -28,7 +28,7 @@ function setup() {
 
   // load any images you need
   planet = loadImage("assets/planet.png");
-  space = loadImage("assets/spacec.png");
+  space = loadImage("assets/spacev.png");
   imageMode(CENTER);
   rectMode(CENTER);
   noStroke();
