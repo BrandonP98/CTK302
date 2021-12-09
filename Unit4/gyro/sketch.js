@@ -37,7 +37,7 @@ function setup() {
 function draw() {
 
   background('#f0c456'); // light blue
-  image(planet, 0, 0, 300, 300);
+  image(planet, 60, 70, 290, 290);
 
   // the map command !!!!
   // takes your variable and maps it from range 1 to range 2
