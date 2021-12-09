@@ -37,6 +37,7 @@ function setup() {
 function draw() {
 
   background('#f0c456'); // light blue
+  image(planet, 0, 0, 300, 300);
 
   // the map command !!!!
   // takes your variable and maps it from range 1 to range 2
@@ -45,13 +46,13 @@ function draw() {
   yPosition = map(beta, -30, 30, 0, height);
 
 
+
   // move the frog around the screen
   push(); // before you use translate, rotate, or scale commands, push and then pop after
   translate(xPosition, yPosition); // move everything over by x, y
   //  rotate(radians(alpha)); // using alpha in here so it doesn't feel bad
 
   // draw the FROG
-  image(planet, 0, 0, 300, 300);
   image(plane, 0, 0, 100, 100);
   pop();
 
@@ -82,7 +83,7 @@ function draw() {
 
   // MORE DECORATIONS - write that pretty ATK type on top.
   fill('white');
-  textSize(35);
+  textSize(33);
   textAlign(CENTER);
   text("What's within your orbit?", width/2, 450);
 
