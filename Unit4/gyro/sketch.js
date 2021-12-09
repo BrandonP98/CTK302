@@ -85,7 +85,7 @@ function draw() {
   fill('white');
   textSize(33);
   textAlign(CENTER);
-  text("What's within your orbit?", width/2, 450);
+  text("What's within your orbit?", width/2, 475);
 
 }
 
