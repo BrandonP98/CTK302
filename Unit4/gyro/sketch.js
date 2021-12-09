@@ -28,7 +28,7 @@ function setup() {
 
   // load any images you need
   planet = loadImage("assets/planet.png");
-  space = loadImage("assets/space.png");
+  space = loadImage("assets/spacec.png");
   imageMode(CENTER);
   rectMode(CENTER);
   noStroke();
@@ -53,7 +53,7 @@ function draw() {
   //  rotate(radians(alpha)); // using alpha in here so it doesn't feel bad
 
   // draw the FROG
-  image(plane, 0, 0, 100, 100);
+  image(space, 0, 0, 100, 100);
   pop();
 
 
