@@ -1,11 +1,13 @@
 // variables needed for gyroscope
-var beta, gamma; // orientation data
-var x = 0; // acceleration data
-var y = 0;
-var z = 0;
-var xPosition = 0;
-var yPosition = 0;
-var plane;
+let alpha = 0, beta = 0, gamma = 0; // orientation data
+let plane;
+//var x = 0; // acceleration data
+//var y = 0;
+//var z = 0;
+let xPosition = 0;
+let yPosition = 0;
+let x = 0, y = 0, z = 0 ;
+//var plane;
 // var bunnyImage;
 var frogPos;
 
@@ -37,8 +39,8 @@ function draw() {
   // the map command !!!!
   // takes your variable and maps it from range 1 to range 2
   // map(yourVar, range1_x, range1_y, range2_x, range2_y) ;
-  xPosition = map(gamma, -18, 18, 0, width);
-  yPosition = map(beta, 25, 45, 0, height);
+  xPosition = map(gamma, -60, 60, 0, width);
+  yPosition = map(beta, -30, 30, 0, height);
 
 
   // move the frog around the screen
@@ -55,13 +57,6 @@ function draw() {
   //frogPos.x = xPosition;
   //frogPos.y = yPosition;
 
-
-
-  // MORE DECORATIONS - write that pretty ATK type on top.
-  fill('white');
-  textSize(40);
-  textAlign(CENTER);
-  text("your words or image here!", width / 2, 600, windowWidth - 200, windowHeight - 200);
 
 
   // Debugging information -- take this out when you're ready for production!
@@ -81,6 +76,12 @@ function draw() {
   text("y = " + y, 25, 170);
   text("z = " + z, 25, 190);
 
+
+  // MORE DECORATIONS - write that pretty ATK type on top.
+  fill('white');
+  textSize(40);
+  textAlign(CENTER);
+  text("your words or image here!", width / 2, 600, windowWidth - 200, windowHeight - 200);
 
 }
 
