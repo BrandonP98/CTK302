@@ -52,6 +52,7 @@ function draw() {
 
   // draw the FROG
   image(plane, 0, 0, 100, 100);
+  image(plane, 0, 0, 100, 100);
   pop();
 
 
@@ -83,7 +84,7 @@ function draw() {
   fill('white');
   textSize(40);
   textAlign(CENTER);
-  text("What's within your orbit?", width / 2, 600, windowWidth - 200, windowHeight - 200);
+  text("What's within your orbit?", width/2, height/2);
 
 }
 
