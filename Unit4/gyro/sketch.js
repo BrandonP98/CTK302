@@ -1,6 +1,6 @@
 // variables needed for gyroscope
 let alpha = 0, beta = 0, gamma = 0; // orientation data
-let plane;
+let space;
 let planet;
 //var x = 0; // acceleration data
 //var y = 0;
@@ -28,7 +28,7 @@ function setup() {
 
   // load any images you need
   planet = loadImage("assets/planet.png");
-  plane = loadImage("assets/plane.png");
+  space = loadImage("assets/space.png");
   imageMode(CENTER);
   rectMode(CENTER);
   noStroke();
