@@ -1,24 +1,21 @@
-// Note - you must change line 19 to your own APPID to get this to work!
-
-//let locate;
-//let kicks;
+let location, alleykicks;
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
-
-    //locate = loadImage("assets/location.jpg");
-    //kicks = loadImage("assets/alleykicks.jpg");
-
+  createCanvas(500, 500);
+  location = loadImage("assets/location.jpg");
+  alleykicks = loadImage("assets/alleykicks.jpg");
+  //Seafood = loadImage("assets/Seafood.png");
+  imageMode(CENTER) ;
 }
 
+
 function draw() {
+  background('green');
 
-      background('#ddff87');
-      //image(locate, 30, 30, 200, 200);
-      //image(kicks, 100, 100, 200, 200);
-      fill('black');
-      textSize(24);
-      text("I enjoy taking walks at night (in somewhat comfortable weather)" 30, 300);
-
+  image(location, width/2, height/2, 100, 100);
+  image(alleykicks, width/2, height/2 - 120, 100, 100);
+  //image(Seafood, width/2, height/2 + 120, 100, 100);
+  textSize(24);
+  text("I enjoy taking walks at night in somewhat comfortable weather" 30, 300)
 
 }
