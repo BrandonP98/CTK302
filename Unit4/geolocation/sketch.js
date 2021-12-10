@@ -18,7 +18,7 @@ function draw() {
       //image(kicks, 100, 100, 200, 200);
       fill('black');
       textSize(24);
-      text("I enjoy taking walks at night (in somewhat comfortable weather " 30, 300);
+      text("I enjoy taking walks at night (in somewhat comfortable weather)" 30, 300);
 
 
 }
