@@ -1,7 +1,7 @@
 // Note - you must change line 19 to your own APPID to get this to work!
 
-let locate;
-let kicks;
+//let locate;
+//let kicks;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
