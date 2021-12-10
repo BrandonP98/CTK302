@@ -6,8 +6,8 @@ let kicks;
 function setup() {
   createCanvas(windowWidth, windowHeight);
 
-    locate = loadImage("assets/location.jpg");
-    kicks = loadImage("assets/alleykicks.jpg");
+    //locate = loadImage("assets/location.jpg");
+    //kicks = loadImage("assets/alleykicks.jpg");
 
 }
 
